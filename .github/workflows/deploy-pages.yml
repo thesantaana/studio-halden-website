@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -29,6 +30,23 @@ jobs:
         run: npm ci
       - name: Build static site
         run: npm run build
+      - name: Preserve recent hashed assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          mkdir -p previous-pages
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=github-pages&per_page=5" \
+            --jq '.artifacts[] | select(.expired == false) | .id' | while read -r artifact_id; do
+              artifact_dir="previous-pages/${artifact_id}"
+              mkdir -p "${artifact_dir}/site"
+              gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" > "${artifact_dir}/artifact.zip"
+              unzip -q "${artifact_dir}/artifact.zip" -d "${artifact_dir}"
+              tar -xf "${artifact_dir}/artifact.tar" -C "${artifact_dir}/site"
+              if [ -d "${artifact_dir}/site/_next/static" ]; then
+                cp -rn "${artifact_dir}/site/_next/static/." "out/_next/static/"
+              fi
+            done
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
