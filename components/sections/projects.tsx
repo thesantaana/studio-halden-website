@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useTransform, useScroll, useSpring } from "framer-motion";
+import { motion, useTransform, useScroll, useSpring, useReducedMotion } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/providers/language-provider";
@@ -13,6 +13,8 @@ export default function Projects() {
     const { content, dict } = useLanguage();
 
     const isDesktop = useMediaQuery(BREAKPOINTS.xl);
+    const shouldReduceMotion = useReducedMotion();
+    const useHorizontal = isDesktop && !shouldReduceMotion;
 
     const targetRef = useRef<HTMLDivElement>(null);
     const horizontalContainerRef = useRef<HTMLDivElement>(null);
@@ -22,7 +24,7 @@ export default function Projects() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        if (!isDesktop) {
+        if (!useHorizontal) {
             const frame = requestAnimationFrame(() => {
                 setMeasurements({ scrollRange: 0, dynamicHeight: "auto" });
             });
@@ -58,7 +60,7 @@ export default function Projects() {
             clearTimeout(timeout);
             resizeObserver.disconnect();
         };
-    }, [isDesktop, content.projects]);
+    }, [useHorizontal, content.projects]);
 
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -83,22 +85,16 @@ export default function Projects() {
             <div
                 className={`
                     w-full 
-                    ${isDesktop
+                    ${useHorizontal
                         ? "sticky top-0 h-screen flex items-center overflow-hidden"
                         : "relative flex flex-col"
                     }
                 `}
             >
 
-                {!isDesktop ? (
+                {!useHorizontal ? (
                     <>
                         <div className="flex flex-col gap-4 px-container mb-10">
-                            <BlurReveal>
-                                <span className="title-counter">
-                                    [003]
-                                </span>
-                            </BlurReveal>
-
                             <BlurReveal>
                                 <h2 className="title">
                                     {dict.title.projects}
@@ -130,12 +126,6 @@ export default function Projects() {
                         <div className="w-[60vw] xl:w-[40vw] shrink-0 flex flex-col justify-center">
 
                             <div className="flex flex-col gap-4">
-
-                                <BlurReveal>
-                                    <span className="title-counter">
-                                        [003]
-                                    </span>
-                                </BlurReveal>
 
                                 <BlurReveal>
                                     <h2 className="title">
@@ -191,9 +181,11 @@ export default function Projects() {
 const ProjectCard = React.memo(function ProjectCard({ project, onClick }: { project: ProjectItem; onClick?: () => void }) {
     return (
         <BlurReveal>
-            <div
+            <button
+                type="button"
                 onClick={onClick}
-                className="group relative w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer"
+                aria-label={project.title}
+                className="group relative block w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
             >
                 <div className="relative w-full h-full overflow-hidden bg-muted border border-border/50 transition-all duration-700 ease-out group-hover:border-foreground/20">
                     <div className="absolute inset-0 z-0">
@@ -211,24 +203,24 @@ const ProjectCard = React.memo(function ProjectCard({ project, onClick }: { proj
                     <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 xl:p-12">
                         <div className="flex justify-between items-start">
                             <div className="overflow-hidden">
-                                <span className="block text-xs xl:text-sm font-mono tracking-widest text-muted-foreground uppercase transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                <span className="block text-xs xl:text-sm font-mono tracking-widest text-foreground/75 uppercase transition-colors duration-500 group-hover:text-foreground">
                                     {project.category}
                                 </span>
                             </div>
                             <div className="overflow-hidden">
-                                <span className="block text-xs xl:text-sm font-mono text-muted-foreground transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-200">
+                                <span className="block text-xs xl:text-sm font-mono text-foreground/75 transition-colors duration-500 group-hover:text-foreground">
                                     {project.year}
                                 </span>
                             </div>
                         </div>
 
-                        <h3 className="absolute bottom-6 md:bottom-8 2xl:bottom-12 left-6 md:left-8 2xl:left-12 text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black tracking-tighter uppercase text-foreground opacity-10 group-hover:opacity-100 transition-opacity duration-500 delay-100 pointer-events-none">
+                        <h3 className="absolute bottom-6 md:bottom-8 2xl:bottom-12 left-6 md:left-8 2xl:left-12 text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black tracking-tighter uppercase text-foreground opacity-100 transition-opacity duration-500 pointer-events-none">
                             {project.title}
                         </h3>
                     </div>
 
                 </div>
-            </div>
+            </button>
         </BlurReveal>
     );
 });

@@ -20,12 +20,6 @@ export default function About() {
                         <div className="flex flex-col gap-4 sticky top-32">
 
                             <BlurReveal>
-                                <span className="title-counter">
-                                    [001]
-                                </span>
-                            </BlurReveal>
-
-                            <BlurReveal>
                                 <h2 className="title relative z-10">
                                     {dict.title.about}
                                 </h2>

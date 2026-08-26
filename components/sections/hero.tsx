@@ -2,7 +2,7 @@
 
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
-import { useScroll, useTransform, useMotionTemplate, motion } from "framer-motion";
+import { useScroll, useTransform, useMotionTemplate, motion, useReducedMotion } from "framer-motion";
 import { useLanguage } from "@/providers/language-provider";
 import { ArrowRight, Mouse } from "lucide-react";
 import { ContactModal } from "@/components/modals/contact-modal";
@@ -31,6 +31,7 @@ const COL_2_IMAGES = [...TRACK_2, ...TRACK_2];
 
 export default function Hero() {
     const { content, dict } = useLanguage();
+    const shouldReduceMotion = useReducedMotion();
     const containerRef = useRef<HTMLDivElement>(null);
     const [contactOpen, setContactOpen] = useState(false);
 
@@ -62,7 +63,7 @@ export default function Hero() {
             >
                 <div className="max-md:hidden flex-1 h-full overflow-hidden relative">
                     <motion.div
-                        animate={{ y: ["0%", "-50%"] }}
+                        animate={shouldReduceMotion ? { y: "0%" } : { y: ["0%", "-50%"] }}
                         transition={{
                             ease: "linear",
                             duration: 32,
@@ -74,7 +75,7 @@ export default function Hero() {
                             <div key={idx} className="w-full aspect-3/4 relative overflow-hidden rounded-4xl border border-border/5">
                                 <Image
                                     src={src}
-                                    alt="Portrait"
+                                    alt="Temporary concept image"
                                     fill
                                     sizes="(max-width: 768px) 0px, (max-width: 1280px) 20vw, 12vw"
                                     priority
@@ -87,7 +88,7 @@ export default function Hero() {
 
                 <div className="max-md:opacity-50 flex-1 h-full overflow-hidden relative">
                     <motion.div
-                        animate={{ y: ["-50%", "0%"] }}
+                        animate={shouldReduceMotion ? { y: "-50%" } : { y: ["-50%", "0%"] }}
                         transition={{
                             ease: "linear",
                             duration: 32,
@@ -99,7 +100,7 @@ export default function Hero() {
                             <div key={idx} className="w-full aspect-3/4 relative overflow-hidden rounded-4xl border border-border/5">
                                 <Image
                                     src={src}
-                                    alt="Portrait"
+                                    alt="Temporary concept image"
                                     fill
                                     sizes="(max-width: 640px) 45vw, (max-width: 1280px) 20vw, 12vw"
                                     priority
@@ -148,10 +149,10 @@ export default function Hero() {
                 <div className="w-full mt-auto flex flex-col justify-center relative z-20 mix-blend-difference">
                     <div className="overflow-hidden">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[140px] font-black tracking-tighter leading-[0.85] text-foreground uppercase whitespace-nowrap">
-                            Kintaro
+                            Studio
                             <br />
                             <span className="text-foreground/80">
-                                Portfolio
+                                Halden
                             </span>
                         </h1>
                     </div>

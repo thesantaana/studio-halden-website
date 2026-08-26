@@ -18,12 +18,6 @@ export default function Contact() {
 
                     <div className="flex flex-col gap-4 mb-16 lg:mb-32">
                         <BlurReveal>
-                            <span className="title-counter">
-                                [005]
-                            </span>
-                        </BlurReveal>
-
-                        <BlurReveal>
                             <h2 className="title">
                                 {dict.title.contact}
                             </h2>
@@ -55,7 +49,8 @@ export default function Contact() {
                             </div>
                         </a>
                     </BlurReveal>
-                    <BlurReveal>
+                    {content.contact.phone && (
+                      <BlurReveal>
                         <a
                             href={`tel:${sanitizePhone(content.contact.phone)}`}
                             className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-14 border-b border-border/50 transition-all duration-700 hover:px-8"
@@ -72,7 +67,8 @@ export default function Contact() {
                                 </div>
                             </div>
                         </a>
-                    </BlurReveal>
+                      </BlurReveal>
+                    )}
                 </div>
 
                 <div className="w-full flex flex-col md:flex-row items-center justify-between pb-12 xl:py-12 xl:border-t border-border/50 gap-8">
@@ -80,7 +76,7 @@ export default function Contact() {
                     <div className="text-sm font-mono tracking-widest text-muted-foreground uppercase flex items-center gap-4 max-xl:hidden">
                         <span>© 2026</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                        <span>KINTARO. {dict.allRightsReserved}</span>
+                        <span>STUDIO HALDEN. {dict.allRightsReserved}</span>
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center gap-4">

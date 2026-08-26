@@ -15,12 +15,12 @@ const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Kintarowwwards",
-  description: "Creative Developer Portfolio",
+  title: "Studio Halden — Independent Design Studio",
+  description: "Identity, digital experience and image-making by Studio Halden.",
 };
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'tr' }];
+  return [{ lang: 'en' }, { lang: 'zh' }];
 }
 
 export default async function LangLayout({
@@ -45,6 +45,14 @@ export default async function LangLayout({
   return (
     <html lang={lang} suppressHydrationWarning>
       <body className={`${inter.variable} ${syne.variable} font-sans bg-background text-foreground antialiased`}>
+        <div hidden data-direction-seed="user-pinned:kintarowwwards@2026-08-26">
+          THESIS: A kinetic studio folio where work, type, and motion lead; it refuses the centered agency hero and equal-card grid.
+          OWN-WORLD: Monochrome fields, oversized Syne typography, fine rules, image rails, circular controls, and grayscale-to-color work reveals.
+          STORY: Visitors identify an independent design studio, understand its capabilities, browse provisional work, learn the process, and start a conversation.
+          FIRST VIEWPORT: Studio Halden fills the lower-left at monumental scale; copy and two actions sit beneath it; a vertical moving image rail occupies the right third.
+          FORM: User-pinned Kintarowwwards adaptation, first choice; seed user-pinned:kintarowwwards@2026-08-26.
+          FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+        </div>
         <LanguageProvider lang={lang} dictionary={dictionary} contents={contents} shared={shared}>
           <ThemeProvider
             attribute="class"

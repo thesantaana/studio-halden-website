@@ -54,7 +54,8 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                             </span>
                         </a>
 
-                        <a
+                        {content.contact.phone && (
+                          <a
                             href={`tel:${sanitizePhone(content.contact.phone)}`}
                             className="group flex items-center gap-4 px-5 py-2.5 rounded-full border border-border/50 bg-secondary/20 backdrop-blur-sm hover:bg-foreground hover:border-foreground/30 transition-all duration-500 ease-out"
                         >
@@ -64,7 +65,8 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                             <span className="text-foreground tracking-wide font-medium text-sm group-hover:text-background transition-colors duration-500">
                                 {content.contact.phone}
                             </span>
-                        </a>
+                          </a>
+                        )}
                     </div>
 
                     <div className="flex flex-wrap gap-3 items-center mt-6">

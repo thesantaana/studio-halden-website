@@ -80,6 +80,8 @@ export function InteractiveParticles() {
     const mouseRef = useRef({ x: -1000, y: -1000, radius: 150 });
 
     useEffect(() => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
         const canvas = canvasRef.current;
         if (!canvas) return;
 

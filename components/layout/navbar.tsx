@@ -150,10 +150,10 @@ export default function Navbar() {
         <Link
           href="#home"
           onClick={(e) => scrollToSection(e, "#home")}
-          className="relative z-110 flex items-center gap-2 group"
+        className="relative z-110 flex items-center gap-2 text-foreground group"
         >
           <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:opacity-70">
-            kintaro
+            studio halden
           </span>
         </Link>
 
@@ -179,10 +179,11 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex xl:hidden items-center gap-4">
+        <div className="flex xl:hidden items-center gap-3 text-foreground">
+          <LanguageSwitcher />
           <button
             onClick={() => setIsMobileMenuOpen(prev => !prev)}
-            className="relative z-110 p-2 text-foreground focus:outline-none"
+            className="relative z-110 flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-background/70 text-foreground focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

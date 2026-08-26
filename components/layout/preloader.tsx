@@ -1,17 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 export function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
+    const shouldReduceMotion = useReducedMotion();
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
             document.body.style.overflow = "";
-        }, 1200);
+        }, shouldReduceMotion ? 0 : 1200);
 
         document.body.style.overflow = "hidden";
 
@@ -19,7 +19,7 @@ export function Preloader() {
             clearTimeout(timer);
             document.body.style.overflow = "";
         };
-    }, []);
+    }, [shouldReduceMotion]);
 
     return (
         <AnimatePresence>
@@ -29,7 +29,7 @@ export function Preloader() {
                     initial={{ y: 0 }}
                     exit={{
                         y: "-100%",
-                        transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] }
+                        transition: { duration: shouldReduceMotion ? 0 : 0.9, ease: [0.76, 0, 0.24, 1] }
                     }}
                     className="fixed inset-0 z-99999 flex flex-col items-center justify-center bg-background pointer-events-auto"
                 >
@@ -83,14 +83,9 @@ export function Preloader() {
 
                             <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md" />
 
-                            <Image
-                                src="/logo.png"
-                                alt="Logo"
-                                width={56}
-                                height={56}
-                                className="object-contain z-10"
-                                priority
-                            />
+                            <span className="relative z-10 text-5xl font-black tracking-[-0.04em] text-foreground">
+                                H
+                            </span>
                         </div>
 
                     </motion.div>
