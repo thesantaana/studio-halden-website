@@ -1,22 +1,23 @@
-# Product
+# MĒTIS product context
 
 ## Purpose
 
-Studio Halden is a provisional bilingual portfolio for prospective clients evaluating the studio's point of view and design capability. The public proposition is the quality of the finished work, not the use of AI in production.
+MĒTIS is a bilingual static portfolio for prospective clients evaluating the studio's judgement, capabilities and work.
 
-## Audience and job
+## Audience
 
-Prospective clients should be able to identify the studio, understand its capabilities, browse selected work, understand the collaboration process, and find a clear contact path.
+- Founders and teams looking for identity or digital design.
+- Design-conscious clients who value clarity, craft and distinctive visual systems.
 
-## Product truth
+## Public promise
 
-- The studio name and public contact channels remain provisional.
-- No confirmed client list, awards, testimonials, performance results, or public case studies have been supplied.
-- Current projects and imagery are temporary concept material and must be labelled accordingly.
-- AI may support work behind the scenes but is not part of the public-facing message.
+- Identity, digital and visual design.
+- Clear, coherent and distinctive visual expression.
 
-## Platform and constraints
+## Truth and constraints
 
-- Static bilingual website with `/zh/` as the default route and `/en/` as the English route.
-- Responsive desktop and mobile layouts.
-- Content remains visible without hover and supports keyboard navigation and reduced motion.
+- AION, NOEMA and KAIROS are self-initiated studies.
+- Do not invent clients, commercial relationships, outcomes, awards or testimonials.
+- Keep MĒTIS spelled with the macron on Ē.
+- Keep the public language focused on finished design capability.
+- The site remains bilingual at `/zh/` and `/en/`.

@@ -8,6 +8,7 @@ import { useMediaQuery, BREAKPOINTS } from "@/hooks/use-media-query";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { ProjectModal } from "@/components/modals/project-modal";
 import type { ProjectItem } from "@/types/project";
+import { withBasePath } from "@/lib/base-path";
 
 export default function Projects() {
     const { content, dict } = useLanguage();
@@ -86,7 +87,7 @@ export default function Projects() {
                 className={`
                     w-full 
                     ${useHorizontal
-                        ? "sticky top-0 h-screen flex items-center overflow-hidden"
+                        ? "sticky top-0 min-h-[100dvh] flex items-center overflow-hidden"
                         : "relative flex flex-col"
                     }
                 `}
@@ -123,7 +124,7 @@ export default function Projects() {
                         style={{ x: smoothX }}
                         className="flex px-container w-max items-center"
                     >
-                        <div className="w-[60vw] xl:w-[40vw] shrink-0 flex flex-col justify-center">
+                        <div className="w-[60vw] xl:w-[40vw] shrink-0 flex flex-col justify-center pr-16">
 
                             <div className="flex flex-col gap-4">
 
@@ -139,15 +140,6 @@ export default function Projects() {
                                     </p>
                                 </BlurReveal>
 
-                                <BlurReveal>
-                                    <div className="mt-12 flex items-center gap-4">
-                                        <div className="h-px w-24 bg-border" />
-                                        <span className="text-sm font-mono text-foreground/40 uppercase">
-                                            {dict.projectsScrollText}
-                                        </span>
-                                    </div>
-                                </BlurReveal>
-
                             </div>
 
                         </div>
@@ -160,11 +152,7 @@ export default function Projects() {
                             />
                         ))}
 
-                        <div className="w-[40vw] h-[70vh] shrink-0 flex flex-col justify-center items-center">
-                            <h3 className="text-[10vw] font-black tracking-tighter text-border uppercase">
-                                {dict.projectsEndText}
-                            </h3>
-                        </div>
+                        <div className="w-[12vw] shrink-0" aria-hidden="true" />
                     </motion.div>
                 )}
             </div>
@@ -184,26 +172,25 @@ const ProjectCard = React.memo(function ProjectCard({ project, onClick }: { proj
             <button
                 type="button"
                 onClick={onClick}
-                aria-label={project.title}
-                className="group relative block w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-foreground"
+                aria-label={`${project.title}: ${project.label}`}
+                className="group relative block w-full xl:w-[45vw] aspect-4/3 shrink-0 xl:mx-6 perspective-1000 cursor-pointer text-left focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B28A67]"
             >
                 <div className="relative w-full h-full overflow-hidden bg-muted border border-border/50 transition-all duration-700 ease-out group-hover:border-foreground/20">
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src={project.image}
+                            src={withBasePath(project.image)}
                             alt={project.title}
                             fill
                             sizes="(max-width: 1280px) 100vw, 45vw"
                             loading="lazy"
-                            className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0"
+                            className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.025] transition-all duration-1000"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
                     </div>
 
                     <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 xl:p-12">
                         <div className="flex justify-between items-start">
                             <div className="overflow-hidden">
-                                <span className="block text-xs xl:text-sm font-mono tracking-widest text-foreground/75 uppercase transition-colors duration-500 group-hover:text-foreground">
+                                <span className="block text-xs xl:text-sm font-mono tracking-widest text-foreground/80 uppercase transition-colors duration-500 group-hover:text-foreground">
                                     {project.category}
                                 </span>
                             </div>
@@ -213,6 +200,10 @@ const ProjectCard = React.memo(function ProjectCard({ project, onClick }: { proj
                                 </span>
                             </div>
                         </div>
+
+                        <span className="absolute bottom-6 right-6 text-xs font-medium text-foreground/75 md:bottom-8 md:right-8 2xl:bottom-12 2xl:right-12">
+                            {project.label}
+                        </span>
 
                         <h3 className="absolute bottom-6 md:bottom-8 2xl:bottom-12 left-6 md:left-8 2xl:left-12 text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black tracking-tighter uppercase text-foreground opacity-100 transition-opacity duration-500 pointer-events-none">
                             {project.title}

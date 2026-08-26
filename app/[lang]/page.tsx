@@ -6,6 +6,7 @@ import Stack from "@/components/sections/stack";
 import Projects from "@/components/sections/projects";
 import Roadmap from "@/components/sections/roadmap";
 import Contact from "@/components/sections/contact";
+import Approach from "@/components/sections/approach";
 
 export default function Home() {
   return (
@@ -28,19 +29,15 @@ export default function Home() {
             <Stack />
           </section>
 
-          <ManifestoFlow reverse />
-
           <section id="projects">
             <Projects />
           </section>
 
-          <ManifestoFlow />
-
-          <section id="roadmap">
-            <Roadmap />
+          <section id="approach">
+            <Approach />
           </section>
 
-          <ManifestoFlow reverse />
+          <Roadmap />
 
           <section id="contact">
             <Contact />

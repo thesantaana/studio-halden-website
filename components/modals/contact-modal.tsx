@@ -9,7 +9,6 @@ import {
 import { useLanguage } from "@/providers/language-provider";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { useLenisModal } from "@/hooks/use-lenis-modal";
-import { sanitizePhone } from "@/lib/utils";
 import { ShineButton } from "@/components/ui/shine-button";
 
 interface ContactModalProps {
@@ -32,7 +31,7 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                 <div className="relative px-8 pt-8 pb-4 shrink-0">
                     <DialogHeader className="gap-3">
                         <DialogTitle className="text-2xl font-bold tracking-tight">
-                            {dict.contactMe}
+                            {dict.startProject}
                         </DialogTitle>
                         <DialogDescription className="text-muted-foreground text-sm leading-relaxed">
                             {dict.contactModalDescription}
@@ -54,9 +53,8 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                             </span>
                         </a>
 
-                        {content.contact.phone && (
-                          <a
-                            href={`tel:${sanitizePhone(content.contact.phone)}`}
+                        <a
+                            href={`tel:${content.contact.phone}`}
                             className="group flex items-center gap-4 px-5 py-2.5 rounded-full border border-border/50 bg-secondary/20 backdrop-blur-sm hover:bg-foreground hover:border-foreground/30 transition-all duration-500 ease-out"
                         >
                             <div className="w-8 h-8 rounded-full border border-border/50 bg-background flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-background transition-transform duration-500">
@@ -65,8 +63,8 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                             <span className="text-foreground tracking-wide font-medium text-sm group-hover:text-background transition-colors duration-500">
                                 {content.contact.phone}
                             </span>
-                          </a>
-                        )}
+                        </a>
+
                     </div>
 
                     <div className="flex flex-wrap gap-3 items-center mt-6">

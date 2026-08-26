@@ -5,12 +5,11 @@ import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "@/components/widgets/language-switcher";
-import ThemeSwitcher from "@/components/widgets/theme-switcher";
 import { useLanguage } from "@/providers/language-provider";
 import { useLenis } from "@/providers/smooth-scroll-provider";
 
 export default function Navbar() {
-  const { dict } = useLanguage();
+  const { dict, language } = useLanguage();
   const lenis = useLenis();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -37,9 +36,8 @@ export default function Navbar() {
   const navLinks = useMemo(() => [
     { name: dict.nav.home, href: "#home" },
     { name: dict.nav.about, href: "#about" },
-    { name: dict.nav.stack, href: "#stack" },
     { name: dict.nav.projects, href: "#projects" },
-    { name: dict.nav.roadmap, href: "#roadmap" },
+    { name: dict.nav.history, href: "#history" },
     { name: dict.nav.contact, href: "#contact" },
   ], [dict.nav]);
 
@@ -153,7 +151,7 @@ export default function Navbar() {
         className="relative z-110 flex items-center gap-2 text-foreground group"
         >
           <span className="text-xl sm:text-2xl font-black tracking-tighter uppercase text-foreground transition-all duration-300 group-hover:opacity-70">
-            studio halden
+            MĒTIS
           </span>
         </Link>
 
@@ -175,7 +173,6 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
-            <ThemeSwitcher />
           </div>
         </div>
 
@@ -183,8 +180,8 @@ export default function Navbar() {
           <LanguageSwitcher />
           <button
             onClick={() => setIsMobileMenuOpen(prev => !prev)}
-            className="relative z-110 flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-background/70 text-foreground focus:outline-none"
-            aria-label="Toggle Menu"
+            className="relative z-110 flex h-10 w-10 items-center justify-center rounded-full border border-border/50 bg-background/70 text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B28A67]"
+            aria-label={language === "zh" ? "打开或关闭菜单" : "Toggle menu"}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -200,9 +197,6 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-90 bg-background xl:hidden flex flex-col h-dvh w-screen"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary-rgb),0.05),transparent)] pointer-events-none" />
-            <div className="absolute inset-0 bg-grid-white/[0.02] pointer-events-none" />
-
             <div className="flex flex-col flex-1 pt-24 sm:pt-32 pb-24 sm:pb-12 px-container overflow-y-auto relative z-10">
               <ul className="flex flex-col gap-6 sm:gap-8">
                 {navLinks.map((link, i) => (
@@ -237,7 +231,6 @@ export default function Navbar() {
               >
                 <div className="flex items-center gap-4">
                   <LanguageSwitcher />
-                  <ThemeSwitcher />
                 </div>
               </motion.div>
             </div>

@@ -1,39 +1,9 @@
 {
-  "contact": {
-    "location": "To be confirmed",
-    "email": "hello@yourstudio.example",
-    "phone": ""
-  },
+  "contact": {"location": "", "email": "dsaf3702@gmail.com", "phone": "19313006137"},
   "social": [
     {"label": "Work", "href": "#projects"},
     {"label": "Studio", "href": "#about"},
-    {"label": "中文", "href": "/zh/"},
-    {"label": "English", "href": "/en/"}
-  ],
-  "stack": {
-    "frontend": [
-      {"name": "Brand Strategy", "icon": ""},
-      {"name": "Visual Identity", "icon": ""},
-      {"name": "Art Direction", "icon": ""},
-      {"name": "Naming Support", "icon": ""}
-    ],
-    "backend": [
-      {"name": "Portfolio Websites", "icon": ""},
-      {"name": "Campaign Pages", "icon": ""},
-      {"name": "Interface Direction", "icon": ""},
-      {"name": "Motion Systems", "icon": ""}
-    ],
-    "database": [
-      {"name": "Editorial Design", "icon": ""},
-      {"name": "Packaging", "icon": ""},
-      {"name": "Presentation Design", "icon": ""},
-      {"name": "Social Systems", "icon": ""}
-    ],
-    "tools": [
-      {"name": "Concept Development", "icon": ""},
-      {"name": "Visual Prototyping", "icon": ""},
-      {"name": "Design Production", "icon": ""},
-      {"name": "Delivery Toolkits", "icon": ""}
-    ]
-  }
+    {"label": "中文", "href": "/studio-halden-website/zh/"},
+    {"label": "English", "href": "/studio-halden-website/en/"}
+  ]
 }

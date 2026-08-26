@@ -1,23 +1,38 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Manrope, Syne } from "next/font/google";
 import "../globals.css";
 import SmoothScroll from "@/providers/smooth-scroll-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { LanguageProvider } from "@/providers/language-provider";
 import { Preloader } from "@/components/layout/preloader";
-import { CustomCursor } from "@/components/layout/custom-cursor";
 import Navbar from "@/components/layout/navbar";
 import { isValidLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 import { getDictionary, getContents, getSharedData } from "@/lib/loaders";
+import { BASE_PATH, withBasePath } from "@/lib/base-path";
 
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
-export const metadata: Metadata = {
-  title: "Studio Halden — Independent Design Studio",
-  description: "Identity, digital experience and image-making by Studio Halden.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const isChinese = lang === "zh";
+  const title = isChinese ? "MĒTIS — 独立设计工作室" : "MĒTIS — Independent Design Studio";
+  const description = isChinese ? "品牌识别、数字界面与视觉设计。" : "Identity, digital and visual design.";
+
+  return {
+    title,
+    description,
+    icons: { icon: withBasePath("/favicon.svg") },
+    alternates: { languages: { "zh-CN": `${BASE_PATH}/zh/`, en: `${BASE_PATH}/en/` } },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: isChinese ? "zh_CN" : "en_US",
+    },
+  };
+}
 
 export function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'zh' }];
@@ -42,24 +57,21 @@ export default async function LangLayout({
     getSharedData(),
   ]);
 
+  // Direction contract: MĒTIS uses a restrained charcoal, warm-white and bronze
+  // archive world. Typography and supplied design imagery lead; motion sets pace.
+
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={`${inter.variable} ${syne.variable} font-sans bg-background text-foreground antialiased`}>
-        <div hidden data-direction-seed="user-pinned:kintarowwwards@2026-08-26">
-          THESIS: A kinetic studio folio where work, type, and motion lead; it refuses the centered agency hero and equal-card grid.
-          OWN-WORLD: Monochrome fields, oversized Syne typography, fine rules, image rails, circular controls, and grayscale-to-color work reveals.
-          STORY: Visitors identify an independent design studio, understand its capabilities, browse provisional work, learn the process, and start a conversation.
-          FIRST VIEWPORT: Studio Halden fills the lower-left at monumental scale; copy and two actions sit beneath it; a vertical moving image rail occupies the right third.
-          FORM: User-pinned Kintarowwwards adaptation, first choice; seed user-pinned:kintarowwwards@2026-08-26.
-          FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
-        </div>
+      <head>
+        <link rel="canonical" href={`https://thesantaana.github.io${BASE_PATH}/${lang}/`} />
+      </head>
+      <body className={`${manrope.variable} ${syne.variable} font-sans bg-background text-foreground antialiased`}>
         <LanguageProvider lang={lang} dictionary={dictionary} contents={contents} shared={shared}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem={false}
           >
-            <CustomCursor />
             <Preloader />
             <SmoothScroll>
               <Navbar />

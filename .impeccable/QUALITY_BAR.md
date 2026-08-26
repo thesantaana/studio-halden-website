@@ -1,9 +1,10 @@
-# Quality bar
+# MĒTIS quality bar
 
-- A first-time visitor recognizes a design studio and sees a primary action within the first viewport.
-- The selected template's kinetic editorial character remains recognizable after localization.
-- Chinese and English routes have matching structure and equivalent meaning.
-- Work titles, categories, and actions are visible without hover and keyboard operable.
-- Mobile exposes brand, language, navigation, and primary action.
-- Reduced-motion users receive a complete static experience.
-- No provisional content is presented as confirmed client evidence.
+- A visitor identifies an independent design studio, its capabilities and the next action within the first viewport.
+- The page feels like a disciplined visual archive, not a technology portfolio, luxury template or mockup wall.
+- MĒTIS always retains the macron on Ē.
+- Bronze remains a restrained accent and never becomes a black-gold theme.
+- Motion is typographic and structural, with full reduced-motion fallbacks.
+- Mobile keeps the brand, language control and navigation visible.
+- Self-initiated work is labelled honestly and no commercial proof is invented.
+- No internal production notes appear in the public interface.

@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { InteractiveParticles } from "@/components/effects/interactive-particles";
 
 interface NotFoundContentProps {
     dict: {
@@ -14,8 +13,7 @@ interface NotFoundContentProps {
 
 export function NotFoundContent({ dict }: NotFoundContentProps) {
     return (
-        <div className="relative w-full h-screen flex flex-col justify-center items-center text-center px-container overflow-hidden bg-background">
-            <InteractiveParticles />
+        <div className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-background px-container text-center">
 
             <div className="relative z-20 flex flex-col items-center justify-center max-w-2xl px-4">
 
@@ -24,7 +22,7 @@ export function NotFoundContent({ dict }: NotFoundContentProps) {
                         404
                     </h1>
 
-                    <span className="absolute text-2xl sm:text-3xl md:text-4xl font-black tracking-[0.25em] text-foreground uppercase drop-shadow-sm font-sans animate-pulse">
+                    <span className="absolute text-2xl sm:text-3xl md:text-4xl font-black tracking-[0.25em] text-foreground uppercase font-sans">
                         {dict.notFound.title}
                     </span>
                 </div>

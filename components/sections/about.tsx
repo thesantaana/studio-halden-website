@@ -1,76 +1,31 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { useLanguage } from "@/providers/language-provider";
-import { useState } from "react";
-import { AboutModal } from "@/components/modals/about-modal";
-import { HangingProfile } from "@/components/widgets/hanging-profile";
+import { withBasePath } from "@/lib/base-path";
 
 export default function About() {
-    const { content, dict } = useLanguage();
-    const [isOpen, setIsOpen] = useState(false);
+  const { content, dict } = useLanguage();
 
-    return (
-        <section className="w-full container-void bg-background text-foreground overflow-hidden relative">
-            <div className="container mx-auto px-container">
-                <div className="flex flex-col xl:flex-row gap-12 xl:gap-32">
-
-                    <div className="xl:w-1/4">
-                        <div className="flex flex-col gap-4 sticky top-32">
-
-                            <BlurReveal>
-                                <h2 className="title relative z-10">
-                                    {dict.title.about}
-                                </h2>
-                            </BlurReveal>
-
-                            <BlurReveal>
-                                <div className="mt-8 hidden xl:block">
-                                    <HangingProfile />
-                                </div>
-                            </BlurReveal>
-
-                        </div>
-                    </div>
-
-                    <div className="xl:w-3/4 flex flex-col gap-24">
-
-                        <div className="space-y-12">
-
-                            <BlurReveal>
-                                <h3 className="text-3xl md:text-5xl lg:text-6xl font-light leading-[1.1]">
-                                    {content.about.intro}
-                                </h3>
-                            </BlurReveal>
-
-                            <BlurReveal>
-                                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                                    {content.about.description}
-                                </p>
-                            </BlurReveal>
-
-                            <BlurReveal>
-                                <>
-                                    <button
-                                        onClick={() => setIsOpen(true)}
-                                        className="group relative inline-flex cursor-pointer items-center gap-2 text-xl md:text-2xl font-medium py-2"
-                                    >
-                                        <span className="relative z-10 border-b-2 border-foreground/30 pb-1 group-hover:border-foreground transition-all duration-300">
-                                            {dict.readFullVersion}
-                                        </span>
-                                        <ArrowRight className="w-6 h-6" />
-                                    </button>
-
-                                    <AboutModal open={isOpen} onOpenChange={setIsOpen} />
-                                </>
-                            </BlurReveal>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section className="container-void relative overflow-hidden bg-background text-foreground">
+      <div className="container mx-auto grid gap-12 px-container lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+        <BlurReveal>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-muted lg:aspect-[3/4]">
+            <Image src={withBasePath("/assets/metis/extra/extra-01_inspiration-wall.webp")} alt={dict.studioImageAlt} fill sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover" />
+          </div>
+        </BlurReveal>
+        <div className="flex flex-col justify-between gap-16 lg:py-6">
+          <BlurReveal>
+            <h2 className="text-[clamp(4.5rem,11vw,9rem)] font-black uppercase leading-[0.78] tracking-[-0.04em]">MĒTIS</h2>
+          </BlurReveal>
+          <div className="max-w-2xl space-y-7">
+            <BlurReveal><p className="text-2xl font-medium leading-snug text-foreground sm:text-3xl lg:text-4xl">{content.about.intro}</p></BlurReveal>
+            <BlurReveal><p className="max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">{content.about.description}</p></BlurReveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,33 +1,40 @@
-# Studio Halden design system
+# MĒTIS design system
 
 ## Direction
 
-The chosen world is a user-pinned adaptation of Kintarowwwards: a kinetic editorial portfolio with oversized typography and vertically moving imagery. It is a replacement for the earlier folio-object direction, not a refinement of it.
+MĒTIS is presented as a mature, restrained independent design studio. The interface behaves like a moving visual archive: typography establishes judgement, imagery supplies material evidence, and motion controls pace.
 
 ## Visual grammar
 
-- Monochrome light and dark themes with one foreground/background contrast system.
-- Syne supplies the large Latin display voice; Inter and the system CJK fallback carry navigation and body copy.
-- Monumental, left-aligned display type; narrow body measures; generous black negative space.
-- Fine rules, circular controls, grayscale imagery, and restrained blur establish depth.
-- Project surfaces are large image planes rather than equal cards. Titles and metadata remain legible before hover.
+- Fixed dark charcoal surface with warm-white type and neutral gray secondary text.
+- Bronze `#B28A67` is the only accent, reserved for small labels, rules, focus and hover states.
+- Syne supplies the display voice; Manrope and CJK system fallbacks carry body copy and navigation.
+- Large left-aligned type, generous negative space, thin rules and image-led sections.
+- Buttons are pills; image surfaces use a consistent 24px radius; informational areas avoid card styling.
+
+## Composition
+
+- The first viewport pairs a monumental MĒTIS wordmark with two opposing image rails.
+- Studio, capabilities, approach, history and contact each use a distinct layout family.
+- Selected Work uses a desktop horizontal passage and a stacked mobile fallback.
+- History preserves the former Roadmap pattern: a central vertical line with alternating desktop nodes, a bronze `#B28A67` scroll-progress stroke and node accents, then a left-aligned line with single-sided content on mobile.
+- The manifesto appears once as moving typography between Studio and Capabilities.
 
 ## Motion
 
-- The first viewport uses two opposing vertical image rails as its signature motion.
-- Desktop work browsing becomes a scroll-driven horizontal sequence.
-- Reveals enhance already-visible content and never hide the static document.
-- `prefers-reduced-motion` removes the preloader delay, particles, smooth scrolling, image-rail loops, and horizontal traversal.
+- Hero rails move in opposing directions to suggest an active archive.
+- The project section maps vertical scroll to horizontal travel on desktop.
+- Reveals begin visible and enhance hierarchy only once.
+- Reduced-motion mode removes loops, smooth scrolling, preloader delay and horizontal traversal.
 
 ## Responsive and language behavior
 
-- `/zh/` and `/en/` share structure, imagery, anchors, and interaction.
-- The mobile header always exposes the brand, language control, and menu.
-- Chinese copy uses shorter measures and avoids forced Latin-style tracking.
-- The root route redirects to `/zh/`; both locale routes are statically generated with trailing-slash directories.
+- `/zh/` and `/en/` share structure, assets, anchors and interactions.
+- Mobile collapses every asymmetric composition to one column and keeps brand, language and menu visible.
+- Root redirects to `/zh/`; both locale routes are statically generated with trailing slashes.
 
 ## Content integrity
 
-- Do not invent clients, awards, metrics, or outcomes.
-- Temporary projects must remain labelled `Concept Study` / `概念研究`.
-- Replace the current third-party imagery, example email, and provisional Studio Halden name before public launch.
+- AION, NOEMA and KAIROS remain labelled as self-initiated.
+- Never add unverified clients, awards, results or testimonials.
+- Use only the reviewed MĒTIS asset library unless the owner supplies additional approved work.

@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 export default function LanguageSwitcher() {
     const { language } = useLanguage();
     const pathname = usePathname();
+    const label = language === "zh" ? "切换语言" : "Switch language";
 
     const getLocalizedPath = (targetLang: string) => {
         return pathname.replace(`/${language}`, `/${targetLang}`);
@@ -24,14 +25,14 @@ export default function LanguageSwitcher() {
     return (
         <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-                <button className="group relative flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-border/50 bg-background/50 backdrop-blur-md text-foreground transition-all duration-500 hover:bg-foreground hover:text-background hover:border-foreground/30 shadow-sm focus:outline-none">
+                <button aria-label={label} className="group relative flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-border/50 bg-background/50 backdrop-blur-md text-foreground transition-all duration-500 hover:bg-foreground hover:text-background hover:border-foreground/30 shadow-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B28A67]">
                     <div className="absolute inset-0 flex h-full w-full justify-center -translate-x-full -skew-x-13 group-hover:duration-1000 group-hover:translate-x-full">
                         <div className="relative h-full w-4 bg-background/20 dark:bg-background/20" />
                     </div>
                     <span className="relative z-10 flex items-center justify-center">
                         <Globe className="h-4 w-4 transition-transform duration-500 group-hover:rotate-12" />
                     </span>
-                    <span className="sr-only">Switch Language</span>
+                    <span className="sr-only">{label}</span>
                 </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="z-120 bg-background/95 backdrop-blur-xl border-border/50 shadow-2xl rounded-2xl min-w-[140px] p-2">

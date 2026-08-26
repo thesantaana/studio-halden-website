@@ -1,26 +1,29 @@
 {
-  "about": {
-    "intro": "We shape *identities* and **digital experiences** with a clear point of view.",
-    "description": "Studio Halden is an independent design practice focused on **identity**, *digital experience*, and image-making. We turn ideas into coherent visual systems designed to be understood, remembered, and used.",
-    "full": "Studio Halden works across **brand identity**, *digital experience*, and visual communication. We begin by finding the central idea: the one thought that can guide language, typography, imagery, motion, and every point of contact.\n\nOur process moves between direction and making. We test concepts in real applications early, so the identity is not only distinctive in a presentation but useful in the world.\n\nThe public portfolio is currently being assembled. The projects shown in this preview are clearly labelled **concept studies** and will be replaced with approved studio work before launch.\n\nAI may support exploration and production behind the scenes. What clients see is the final design thinking, craft, and outcome."
-  },
-  "manifesto": ["CLEAR IDEAS", "USEFUL BEAUTY", "AUTHORED SYSTEMS", "IMAGE WITH PURPOSE", "MOTION WITH MEANING", "BUILT TO LAST"],
+  "about": {"intro": "MĒTIS takes its name from the ancient Greek μῆτις - intelligence, skill and judgement.", "description": "We help brands build clear, coherent and distinctive visual identities."},
+  "manifesto": ["INTELLIGENCE", "CLARITY", "CRAFT", "FORM"],
   "projects": [
-    {"id": "1", "title": "Field Notes", "category": "Identity System · Concept Study", "year": "Preview", "description": "A provisional identity study exploring how a restrained typographic system can hold editorial, packaging, and digital applications together. The image is temporary and will be replaced with approved studio work.", "image": "/projects/20260427093247885.jpg", "stack": ["Art Direction", "Identity", "Editorial", "Digital"]},
-    {"id": "2", "title": "Signal / Noise", "category": "Digital Experience · Concept Study", "year": "Preview", "description": "A provisional digital experience study built around contrast, rhythm, and progressive disclosure. It demonstrates how a strong interface can feel expressive while keeping the work easy to browse.", "image": "/projects/20260427093247620.jpg", "stack": ["Creative Direction", "UX Direction", "Interface Design", "Motion"]},
-    {"id": "3", "title": "Afterimage", "category": "Campaign World · Concept Study", "year": "Preview", "description": "A provisional campaign world designed as a flexible image and motion system rather than a single key visual. The final case study will be replaced when approved portfolio material is available.", "image": "/projects/20260305210513749.jpg", "stack": ["Campaign", "Image-making", "Motion Direction", "Social System"]}
+    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "An identity study built around proportion, typography and order.", "label": "Self-initiated", "image": "/assets/metis/work/work-01_aion.webp", "stack": ["Identity", "Editorial"]},
+    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "A digital study of content, interface and visual systems.", "label": "Self-initiated", "image": "/assets/metis/work/work-02_noema.webp", "stack": ["Digital", "Identity"]},
+    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "A brand concept shaped through packaging, material and visual rhythm.", "label": "Self-initiated", "image": "/assets/metis/work/work-03_kairos.webp", "stack": ["Brand", "Packaging"]}
+  ],
+  "approach": [
+    {"id": "01", "title": "Understand", "description": "Define the problem before the style."},
+    {"id": "02", "title": "Direct", "description": "Find one clear idea to guide the work."},
+    {"id": "03", "title": "Build", "description": "Bring type, image and interface into one system."},
+    {"id": "04", "title": "Test", "description": "Put the system into real contexts."},
+    {"id": "05", "title": "Deliver", "description": "Leave behind something built to be used."}
   ],
   "roadmap": [
-    {"id": "01", "year": "Discover", "description": "We clarify the audience, context, constraints, and the decision the design needs to influence.", "stack": ["Brief", "Research", "Positioning"]},
-    {"id": "02", "year": "Frame", "description": "We turn the brief into a small set of visual territories and choose the idea with the strongest potential.", "stack": ["Concept", "Art Direction", "Narrative"]},
-    {"id": "03", "year": "Make", "description": "We build the core identity and test it across the surfaces that matter most to the project.", "stack": ["Design System", "Digital", "Image"]},
-    {"id": "04", "year": "Refine", "description": "We review the system in context, sharpen the details, and adapt it across formats and screen sizes.", "stack": ["Review", "Motion", "Responsive"]},
-    {"id": "05", "year": "Deliver", "description": "We prepare the final assets, rules, and reusable components so the work can continue consistently.", "stack": ["Handoff", "Guidelines", "Toolkit"]}
+    {"id": "01", "year": "2024.08 — FORMATION", "title": "The studio begins to take shape", "description": "The studio began to take shape through early experiments in identity, web and visual design.", "stack": ["Identity", "Web", "Visual"]},
+    {"id": "02", "year": "2024.12 — FIRST SYSTEM", "title": "From individual pieces to visual systems", "description": "The practice moved beyond isolated outputs toward systems connecting typography, layout, imagery, interfaces and applications.", "stack": ["Typography", "Systems", "Digital"]},
+    {"id": "03", "year": "2025.06 — EXPANSION", "title": "The scope of design expands", "description": "The scope expanded across identity, digital interfaces, editorial design and visual communication.", "stack": ["Brand Identity", "Digital", "Editorial"]},
+    {"id": "04", "year": "2026.04 — NATIONAL PROJECT", "title": "Project selected at national level", "description": "Contributed to the project's visual identity, interface and overall design language. The project was subsequently selected as a national-level project.", "stack": ["National Project", "Visual System", "Product"]},
+    {"id": "05", "year": "2026.08 — MĒTIS", "title": "MĒTIS becomes the studio name", "description": "The studio adopted the name MĒTIS, from the ancient Greek μῆτις — intelligence, skill and judgement.", "stack": ["MĒTIS", "Independent Design Studio"]}
   ],
   "stack": {
-    "frontend": [{"name": "Brand Strategy", "icon": ""}, {"name": "Visual Identity", "icon": ""}, {"name": "Art Direction", "icon": ""}, {"name": "Naming Support", "icon": ""}],
-    "backend": [{"name": "Portfolio Websites", "icon": ""}, {"name": "Campaign Pages", "icon": ""}, {"name": "Interface Direction", "icon": ""}, {"name": "Motion Systems", "icon": ""}],
-    "database": [{"name": "Editorial Design", "icon": ""}, {"name": "Packaging", "icon": ""}, {"name": "Presentation Design", "icon": ""}, {"name": "Social Systems", "icon": ""}],
-    "tools": [{"name": "Concept Development", "icon": ""}, {"name": "Visual Prototyping", "icon": ""}, {"name": "Design Production", "icon": ""}, {"name": "Delivery Toolkits", "icon": ""}]
+    "frontend": [{"name": "Visual Identity", "icon": ""}, {"name": "Logo Systems", "icon": ""}, {"name": "Typography", "icon": ""}, {"name": "Guidelines", "icon": ""}],
+    "backend": [{"name": "Web Design", "icon": ""}, {"name": "Interface", "icon": ""}, {"name": "Responsive", "icon": ""}, {"name": "Motion", "icon": ""}],
+    "database": [{"name": "Poster", "icon": ""}, {"name": "Editorial", "icon": ""}, {"name": "Packaging", "icon": ""}, {"name": "Presentation", "icon": ""}],
+    "tools": [{"name": "Visual Concept", "icon": ""}, {"name": "Image Direction", "icon": ""}, {"name": "Design Systems", "icon": ""}]
   }
 }
