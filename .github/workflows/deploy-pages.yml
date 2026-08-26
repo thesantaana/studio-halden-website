@@ -44,7 +44,7 @@ jobs:
               unzip -q "${artifact_dir}/artifact.zip" -d "${artifact_dir}"
               tar -xf "${artifact_dir}/artifact.tar" -C "${artifact_dir}/site"
               if [ -d "${artifact_dir}/site/_next/static" ]; then
-                cp -rn "${artifact_dir}/site/_next/static/." "out/_next/static/"
+                rsync -a --ignore-existing "${artifact_dir}/site/_next/static/" "out/_next/static/"
               fi
             done
       - name: Upload Pages artifact
