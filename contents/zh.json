@@ -1,5 +1,5 @@
 {
-  "about": {"intro": "品牌名 MĒTIS 取自古希腊语 μῆτις，意指智慧、技巧与判断。", "description": "帮助品牌建立清晰、一致且具有辨识度的视觉表达。"},
+  "about": {"intro": "品牌名 MĒTIS 取自古希腊语 μῆτις，意指智慧、技巧与判断。", "description": "帮助客户建立清晰、一致且具有辨识度的视觉表达。"},
   "manifesto": ["判断", "清晰", "技艺", "形式"],
   "projects": [
     {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "一次关于比例、字体与秩序的视觉识别研究。", "label": "智慧医疗系统品牌设计", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["视觉识别", "编辑设计"]},

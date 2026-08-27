@@ -1,5 +1,5 @@
 {
-  "about": {"intro": "The brand name MĒTIS comes from the ancient Greek μῆτις, meaning intelligence, skill and judgement.", "description": "We help brands build clear, coherent and distinctive visual identities."},
+  "about": {"intro": "The brand name MĒTIS comes from the ancient Greek μῆτις, meaning intelligence, skill and judgement.", "description": "We help clients build clear, coherent and distinctive visual identities."},
   "manifesto": ["INTELLIGENCE", "CLARITY", "CRAFT", "FORM"],
   "projects": [
     {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "An identity study built around proportion, typography and order.", "label": "Smart Healthcare System Brand Design", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["Identity", "Editorial"]},
