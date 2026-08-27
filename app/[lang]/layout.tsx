@@ -18,7 +18,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   const isChinese = lang === "zh";
   const title = isChinese ? "MĒTIS — 独立设计工作室" : "MĒTIS — Independent Design Studio";
-  const description = isChinese ? "品牌识别、数字界面与视觉设计。" : "Identity, digital and visual design.";
+  const description = isChinese
+    ? "一家专注于品牌识别、数字界面的设计工作室。"
+    : "A design studio focused on brand identity and digital interfaces.";
 
   return {
     title,
