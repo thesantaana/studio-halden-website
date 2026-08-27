@@ -104,7 +104,7 @@ export default function Projects() {
 
                             <BlurReveal>
                                 <p className="mt-4 text-muted-foreground text-lg">
-                                    {dict.projectsIntro}
+                                    <ProjectIntro text={dict.projectsIntro} />
                                 </p>
                             </BlurReveal>
                         </div>
@@ -136,7 +136,7 @@ export default function Projects() {
 
                                 <BlurReveal>
                                     <p className="mt-4 text-5xl font-light leading-tight">
-                                        {dict.projectsIntro}
+                                        <ProjectIntro text={dict.projectsIntro} />
                                     </p>
                                 </BlurReveal>
 
@@ -163,6 +163,24 @@ export default function Projects() {
                 project={selectedProject}
             />
         </section>
+    );
+}
+
+function ProjectIntro({ text }: { text: string }) {
+    const [before, ...after] = text.split("1000+");
+
+    if (after.length === 0) {
+        return text;
+    }
+
+    return (
+        <>
+            {before}
+            <strong className="bg-linear-to-r from-[#8E6B4D] via-[#DEC194] to-[#A97D55] bg-clip-text font-extrabold text-transparent drop-shadow-[0_1px_0_rgba(255,230,190,0.12)]">
+                1000+
+            </strong>
+            {after.join("1000+")}
+        </>
     );
 }
 
@@ -202,7 +220,7 @@ const ProjectCard = React.memo(function ProjectCard({ project, onClick }: { proj
                             </div>
                         </div>
 
-                        <span className="absolute bottom-6 right-6 text-xs font-medium text-foreground/75 md:bottom-8 md:right-8 2xl:bottom-12 2xl:right-12">
+                        <span className="absolute bottom-6 right-6 max-w-[44%] text-right text-[10px] font-medium leading-snug text-foreground/75 transition-colors duration-500 group-hover:text-foreground md:bottom-8 md:right-8 md:text-xs 2xl:bottom-12 2xl:right-12">
                             {project.label}
                         </span>
 

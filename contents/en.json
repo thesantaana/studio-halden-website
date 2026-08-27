@@ -1,17 +1,17 @@
 {
-  "about": {"intro": "MĒTIS takes its name from the ancient Greek μῆτις - intelligence, skill and judgement.", "description": "We help brands build clear, coherent and distinctive visual identities."},
+  "about": {"intro": "The brand name MĒTIS comes from the ancient Greek μῆτις, meaning intelligence, skill and judgement.", "description": "We help brands build clear, coherent and distinctive visual identities."},
   "manifesto": ["INTELLIGENCE", "CLARITY", "CRAFT", "FORM"],
   "projects": [
-    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "An identity study built around proportion, typography and order.", "label": "Self-initiated", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["Identity", "Editorial"]},
-    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "A digital study of content, interface and visual systems.", "label": "Self-initiated", "image": "/assets/metis/work/work-05_guangfu-control.webp", "stack": ["Digital", "Identity"]},
-    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "A brand concept shaped through packaging, material and visual rhythm.", "label": "Self-initiated", "image": "/assets/metis/work/work-06_guangfu-dashboard.webp", "stack": ["Brand", "Packaging"]}
+    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "An identity study built around proportion, typography and order.", "label": "Smart Healthcare System Brand Design", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["Identity", "Editorial"]},
+    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "A digital study of content, interface and visual systems.", "label": "PV Control Center Interface Design", "image": "/assets/metis/work/work-05_guangfu-control.webp", "stack": ["Digital", "Identity"]},
+    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "A brand concept shaped through packaging, material and visual rhythm.", "label": "Server Form Frontend Design", "image": "/assets/metis/work/work-06_guangfu-dashboard.webp", "stack": ["Brand", "Packaging"]}
   ],
   "approach": [
-    {"id": "01", "title": "Understand", "description": "Define the problem before the style."},
-    {"id": "02", "title": "Direct", "description": "Find one clear idea to guide the work."},
-    {"id": "03", "title": "Build", "description": "Bring type, image and interface into one system."},
-    {"id": "04", "title": "Test", "description": "Put the system into real contexts."},
-    {"id": "05", "title": "Deliver", "description": "Leave behind something built to be used."}
+    {"id": "01", "title": "Research", "titleEn": "RESEARCH", "description": "Understand the brand, audience and context. Review what already exists and identify the problem worth solving.", "keywords": ["Context", "Audit", "References"]},
+    {"id": "02", "title": "Direction", "titleEn": "DIRECTION", "description": "Turn research into a clear visual position, defining the concept, mood, language and boundaries of the work.", "keywords": ["Concept", "Mood", "Art Direction"]},
+    {"id": "03", "title": "System", "titleEn": "SYSTEM", "description": "Bring typography, layout, imagery, colour and interface into one coherent visual language.", "keywords": ["Type", "Grid", "Image", "Interface"]},
+    {"id": "04", "title": "Application", "titleEn": "APPLICATION", "description": "Test the system across real formats — web, print, packaging and digital interfaces — then refine it through use.", "keywords": ["Web", "Print", "Packaging", "Digital"]},
+    {"id": "05", "title": "Delivery", "titleEn": "DELIVERY", "description": "Organise the final design, guidelines and reusable assets so the system can continue to work after the project ends.", "keywords": ["Guidelines", "Assets", "Handoff"]}
   ],
   "roadmap": [
     {"id": "01", "year": "2024.08 — FORMATION", "title": "The studio begins to take shape", "description": "The studio began to take shape through early experiments in identity, web and visual design.", "stack": ["Identity", "Web", "Visual"]},
@@ -21,7 +21,7 @@
     {"id": "05", "year": "2026.08 — MĒTIS", "title": "MĒTIS becomes the studio name", "description": "The studio adopted the name MĒTIS, from the ancient Greek μῆτις — intelligence, skill and judgement.", "stack": ["MĒTIS", "Independent Design Studio"]}
   ],
   "stack": {
-    "frontend": [{"name": "Visual Identity", "icon": ""}, {"name": "Logo Systems", "icon": ""}, {"name": "Typography", "icon": ""}, {"name": "Guidelines", "icon": ""}],
+    "frontend": [{"name": "Visual Identity", "icon": ""}, {"name": "Logo Systems", "icon": ""}, {"name": "Logo Design", "icon": ""}, {"name": "Guidelines", "icon": ""}],
     "backend": [{"name": "Web Design", "icon": ""}, {"name": "Interface", "icon": ""}, {"name": "Responsive", "icon": ""}, {"name": "Motion", "icon": ""}],
     "database": [{"name": "Poster", "icon": ""}, {"name": "Editorial", "icon": ""}, {"name": "Packaging", "icon": ""}, {"name": "Presentation", "icon": ""}],
     "tools": [{"name": "Visual Concept", "icon": ""}, {"name": "Image Direction", "icon": ""}, {"name": "Design Systems", "icon": ""}]

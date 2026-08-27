@@ -1,17 +1,17 @@
 {
-  "about": {"intro": "MĒTIS 取自古希腊语 μῆτις，意指智慧、技巧与判断。", "description": "帮助品牌建立清晰、一致且具有辨识度的视觉表达。"},
+  "about": {"intro": "品牌名 MĒTIS 取自古希腊语 μῆτις，意指智慧、技巧与判断。", "description": "帮助品牌建立清晰、一致且具有辨识度的视觉表达。"},
   "manifesto": ["判断", "清晰", "技艺", "形式"],
   "projects": [
-    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "一次关于比例、字体与秩序的视觉识别研究。", "label": "自主项目", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["视觉识别", "编辑设计"]},
-    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "围绕内容、界面与视觉系统展开的数字设计研究。", "label": "自主项目", "image": "/assets/metis/work/work-05_guangfu-control.webp", "stack": ["数字设计", "视觉识别"]},
-    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "以包装、材质与图像节奏为核心的品牌概念。", "label": "自主项目", "image": "/assets/metis/work/work-06_guangfu-dashboard.webp", "stack": ["品牌设计", "包装设计"]}
+    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "一次关于比例、字体与秩序的视觉识别研究。", "label": "智慧医疗系统品牌设计", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["视觉识别", "编辑设计"]},
+    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "围绕内容、界面与视觉系统展开的数字设计研究。", "label": "光伏智控中心样式设计", "image": "/assets/metis/work/work-05_guangfu-control.webp", "stack": ["数字设计", "视觉识别"]},
+    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "以包装、材质与图像节奏为核心的品牌概念。", "label": "服务器表单前端设计", "image": "/assets/metis/work/work-06_guangfu-dashboard.webp", "stack": ["品牌设计", "包装设计"]}
   ],
   "approach": [
-    {"id": "01", "title": "理解", "description": "先弄清问题，而不是先决定风格。"},
-    {"id": "02", "title": "定向", "description": "找到一个足以指导整个项目的核心方向。"},
-    {"id": "03", "title": "构建", "description": "让字体、图像、版式与界面形成同一种语言。"},
-    {"id": "04", "title": "验证", "description": "把设计放进真实使用场景。"},
-    {"id": "05", "title": "交付", "description": "留下能够继续被使用的系统。"}
+    {"id": "01", "title": "研究", "titleEn": "RESEARCH", "description": "理解品牌、受众与使用场景，梳理已有信息与视觉问题，找到真正值得解决的部分。", "keywords": ["Context", "Audit", "References"]},
+    {"id": "02", "title": "方向", "titleEn": "DIRECTION", "description": "将研究转化为一个清晰的视觉判断，确定概念、情绪、语言与项目边界。", "keywords": ["Concept", "Mood", "Art Direction"]},
+    {"id": "03", "title": "系统", "titleEn": "SYSTEM", "description": "让字体、版式、图像、色彩与界面遵循同一种逻辑，形成完整而一致的视觉语言。", "keywords": ["Type", "Grid", "Image", "Interface"]},
+    {"id": "04", "title": "应用", "titleEn": "APPLICATION", "description": "把系统放进真实媒介：网页、印刷、包装与数字界面，在使用中验证并调整。", "keywords": ["Web", "Print", "Packaging", "Digital"]},
+    {"id": "05", "title": "交付", "titleEn": "DELIVERY", "description": "整理最终设计、规范与可复用资产，让作品在项目结束之后仍能够被持续使用。", "keywords": ["Guidelines", "Assets", "Handoff"]}
   ],
   "roadmap": [
     {"id": "01", "year": "2024.08 — FORMATION", "title": "工作室雏形形成", "description": "最初的工作集中在品牌、网页与视觉实验。不同类型的项目逐渐被放进同一套设计方法里，工作室的雏形由此形成。", "stack": ["Identity", "Web", "Visual"]},
@@ -21,7 +21,7 @@
     {"id": "05", "year": "2026.08 — MĒTIS", "title": "MĒTIS 正式成为工作室名称", "description": "工作室最终以 MĒTIS 命名。这个词来自古希腊语 μῆτις，意指智慧、技巧与判断，也成为工作室处理设计问题的方法起点。", "stack": ["MĒTIS", "Independent Design Studio"]}
   ],
   "stack": {
-    "frontend": [{"name": "视觉识别", "icon": ""}, {"name": "标志系统", "icon": ""}, {"name": "字体", "icon": ""}, {"name": "品牌规范", "icon": ""}],
+    "frontend": [{"name": "视觉识别", "icon": ""}, {"name": "标志系统", "icon": ""}, {"name": "Logo设计", "icon": ""}, {"name": "品牌规范", "icon": ""}],
     "backend": [{"name": "网站", "icon": ""}, {"name": "界面", "icon": ""}, {"name": "响应式", "icon": ""}, {"name": "动效", "icon": ""}],
     "database": [{"name": "海报", "icon": ""}, {"name": "编辑设计", "icon": ""}, {"name": "包装", "icon": ""}, {"name": "演示设计", "icon": ""}],
     "tools": [{"name": "视觉概念", "icon": ""}, {"name": "图像方向", "icon": ""}, {"name": "设计系统", "icon": ""}]
