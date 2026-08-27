@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { BlurReveal } from "@/components/effects/blur-reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { useLanguage } from "@/providers/language-provider";
 import type { RoadmapItem } from "@/types/roadmap";
 
@@ -24,7 +25,7 @@ export default function Roadmap() {
 
       <div className="container relative z-10 mx-auto max-w-6xl px-container">
         <div className="mb-24 flex flex-col gap-4 text-center md:mb-40 md:items-center">
-          <BlurReveal><h2 className="title">{dict.title.history}</h2></BlurReveal>
+          <BlurReveal className="w-full max-w-xl"><SectionHeading align="center">{dict.title.history}</SectionHeading></BlurReveal>
           <BlurReveal><p className="mt-3 max-w-xl text-lg font-medium italic tracking-tight text-foreground/60">{dict.historyDescription}</p></BlurReveal>
         </div>
 

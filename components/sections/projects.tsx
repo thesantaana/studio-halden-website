@@ -7,6 +7,7 @@ import { useLanguage } from "@/providers/language-provider";
 import { useMediaQuery, BREAKPOINTS } from "@/hooks/use-media-query";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 import { ProjectModal } from "@/components/modals/project-modal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import type { ProjectItem } from "@/types/project";
 import { withBasePath } from "@/lib/base-path";
 
@@ -97,9 +98,7 @@ export default function Projects() {
                     <>
                         <div className="flex flex-col gap-4 px-container mb-10">
                             <BlurReveal>
-                                <h2 className="title">
-                                    {dict.title.projects}
-                                </h2>
+                                <SectionHeading>{dict.title.projects}</SectionHeading>
                             </BlurReveal>
 
                             <BlurReveal>
@@ -129,9 +128,7 @@ export default function Projects() {
                             <div className="flex flex-col gap-4">
 
                                 <BlurReveal>
-                                    <h2 className="title">
-                                        {dict.title.projects}
-                                    </h2>
+                                    <SectionHeading>{dict.title.projects}</SectionHeading>
                                 </BlurReveal>
 
                                 <BlurReveal>

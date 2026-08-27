@@ -182,7 +182,7 @@
 @layer components {
 
   .title {
-    @apply text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter text-foreground uppercase leading-none;
+    @apply text-[clamp(2.5rem,5vw,4.125rem)] font-extrabold tracking-[-0.04em] text-foreground uppercase leading-none;
   }
 
   .title-counter {

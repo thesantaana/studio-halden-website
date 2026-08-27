@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { BlurReveal } from "@/components/effects/blur-reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { useLanguage } from "@/providers/language-provider";
 
 export default function Contact() {
@@ -11,7 +12,7 @@ export default function Contact() {
     <section className="border-t border-border/60 bg-background px-container pb-10 pt-24 text-foreground sm:pt-32 lg:pt-40">
       <div className="container mx-auto">
         <div className="max-w-5xl">
-          <BlurReveal><h2 className="text-[clamp(3.5rem,9vw,8rem)] font-black leading-[0.9] tracking-[-0.04em]">{dict.title.contact}</h2></BlurReveal>
+          <BlurReveal><SectionHeading variant="display">{dict.title.contact}</SectionHeading></BlurReveal>
           <BlurReveal><p className="mt-7 max-w-xl text-xl leading-relaxed text-muted-foreground">{dict.contactIntroText}</p></BlurReveal>
           <BlurReveal>
             <div className="mt-10 max-w-3xl">

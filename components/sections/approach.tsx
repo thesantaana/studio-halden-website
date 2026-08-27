@@ -1,6 +1,7 @@
 "use client";
 
 import { BlurReveal } from "@/components/effects/blur-reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { useLanguage } from "@/providers/language-provider";
 
 type ApproachItem = {
@@ -76,7 +77,7 @@ export default function Approach() {
     <section className="container-void border-t border-border/60 bg-background text-foreground">
       <div className="container mx-auto px-container">
         <div className="mb-14 max-w-3xl sm:mb-20">
-          <BlurReveal><h2 className="title">{dict.title.approach}</h2></BlurReveal>
+          <BlurReveal><SectionHeading>{dict.title.approach}</SectionHeading></BlurReveal>
           <BlurReveal><p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{dict.approachDescription}</p></BlurReveal>
         </div>
 
