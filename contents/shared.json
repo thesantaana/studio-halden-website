@@ -3,7 +3,7 @@
   "social": [
     {"label": "Work", "href": "#projects"},
     {"label": "Studio", "href": "#about"},
-    {"label": "中文", "href": "/studio-halden-website/zh/"},
-    {"label": "English", "href": "/studio-halden-website/en/"}
+    {"label": "中文", "href": "/zh/"},
+    {"label": "English", "href": "/en/"}
   ]
 }

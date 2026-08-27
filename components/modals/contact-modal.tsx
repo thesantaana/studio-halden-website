@@ -10,6 +10,7 @@ import { useLanguage } from "@/providers/language-provider";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
 import { useLenisModal } from "@/hooks/use-lenis-modal";
 import { ShineButton } from "@/components/ui/shine-button";
+import { withBasePath } from "@/lib/base-path";
 
 interface ContactModalProps {
     open: boolean;
@@ -71,7 +72,7 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                         {content.social.map((link: { label: string; href: string }) => (
                             <div key={link.label}>
                                 <ShineButton
-                                    href={link.href}
+                                    href={withBasePath(link.href)}
                                     className="h-10 px-5"
                                     shineClassName="w-4 bg-background/20 dark:bg-background/20"
                                 >

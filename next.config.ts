@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
+const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
     output: "export",
-    basePath: "/studio-halden-website",
-    assetPrefix: "/studio-halden-website/",
+    basePath: isGitHubPages ? "/studio-halden-website" : "",
+    assetPrefix: isGitHubPages ? "/studio-halden-website/" : "",
     trailingSlash: true,
     images: {
-        formats: ["image/avif", "image/webp"],
         unoptimized: true,
     },
 };
