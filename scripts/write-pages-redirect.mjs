@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
-const canonical = process.env.GITHUB_ACTIONS === "true"
+const canonical = process.env.NEXT_PUBLIC_SITE_BASE_PATH === "/studio-halden-website"
   ? '    <link rel="canonical" href="https://thesantaana.github.io/studio-halden-website/zh/">\n'
   : "";
 

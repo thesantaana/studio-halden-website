@@ -1,5 +1,5 @@
-export const IS_GITHUB_PAGES = process.env.GITHUB_ACTIONS === "true";
-export const BASE_PATH = IS_GITHUB_PAGES ? "/studio-halden-website" : "";
+export const BASE_PATH = process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? "";
+export const IS_GITHUB_PAGES = BASE_PATH === "/studio-halden-website";
 
 export function withBasePath(path: string) {
   if (!path.startsWith("/") || path.startsWith(BASE_PATH)) return path;
