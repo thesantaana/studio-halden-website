@@ -2,7 +2,7 @@
   "nav": {"home": "首页", "about": "工作室简介", "projects": "代表作品", "history": "工作室历史", "contact": "联系我们"},
   "title": {"about": "MĒTIS", "stack": "业务范围", "projects": "代表作品", "approach": "工作方法", "history": "工作室历史", "contact": "有项目要谈？"},
   "heroSubtitle": "INDEPENDENT DESIGN STUDIO",
-  "heroDescription": "一家专注于品牌识别、数字界面的设计工作室。",
+  "heroDescription": "一家专注于品牌识别、数字界面的设计工作室",
   "viewWork": "查看作品",
   "startProject": "开始合作",
   "brandIdentity": "品牌设计",
