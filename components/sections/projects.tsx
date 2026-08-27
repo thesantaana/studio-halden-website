@@ -103,7 +103,7 @@ export default function Projects() {
                             </BlurReveal>
 
                             <BlurReveal>
-                                <p className="mt-4 text-muted-foreground text-lg">
+                                <p className="mt-4 whitespace-pre-line text-muted-foreground text-lg">
                                     <ProjectIntro text={dict.projectsIntro} />
                                 </p>
                             </BlurReveal>
@@ -135,7 +135,7 @@ export default function Projects() {
                                 </BlurReveal>
 
                                 <BlurReveal>
-                                    <p className="mt-4 text-5xl font-light leading-tight">
+                                    <p className="mt-4 whitespace-pre-line text-5xl font-light leading-tight">
                                         <ProjectIntro text={dict.projectsIntro} />
                                     </p>
                                 </BlurReveal>
