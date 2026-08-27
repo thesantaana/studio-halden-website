@@ -2,9 +2,9 @@
   "about": {"intro": "MĒTIS takes its name from the ancient Greek μῆτις - intelligence, skill and judgement.", "description": "We help brands build clear, coherent and distinctive visual identities."},
   "manifesto": ["INTELLIGENCE", "CLARITY", "CRAFT", "FORM"],
   "projects": [
-    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "An identity study built around proportion, typography and order.", "label": "Self-initiated", "image": "/assets/metis/work/work-01_aion.webp", "stack": ["Identity", "Editorial"]},
-    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "A digital study of content, interface and visual systems.", "label": "Self-initiated", "image": "/assets/metis/work/work-02_noema.webp", "stack": ["Digital", "Identity"]},
-    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "A brand concept shaped through packaging, material and visual rhythm.", "label": "Self-initiated", "image": "/assets/metis/work/work-03_kairos.webp", "stack": ["Brand", "Packaging"]}
+    {"id": "aion", "title": "AION", "category": "Identity / Editorial", "year": "2026", "description": "An identity study built around proportion, typography and order.", "label": "Self-initiated", "image": "/assets/metis/work/work-04_carenexus.webp", "stack": ["Identity", "Editorial"]},
+    {"id": "noema", "title": "NOEMA", "category": "Digital / Identity", "year": "2026", "description": "A digital study of content, interface and visual systems.", "label": "Self-initiated", "image": "/assets/metis/work/work-05_guangfu-control.webp", "stack": ["Digital", "Identity"]},
+    {"id": "kairos", "title": "KAIROS", "category": "Brand / Packaging", "year": "2026", "description": "A brand concept shaped through packaging, material and visual rhythm.", "label": "Self-initiated", "image": "/assets/metis/work/work-06_guangfu-dashboard.webp", "stack": ["Brand", "Packaging"]}
   ],
   "approach": [
     {"id": "01", "title": "Understand", "description": "Define the problem before the style."},
